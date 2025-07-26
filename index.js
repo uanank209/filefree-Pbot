@@ -234,7 +234,7 @@ async function syncModulesAndEvents() {
 
   // Kiểm tra phiên bản
   const LOCAL_VERSION = "1.0.0";
-  const GITHUB_RAW_URL = "https://raw.githubusercontent.com/uanank7729/File-Free-PBot/refs/heads/main/index.js";
+  const GITHUB_RAW_URL = "https://raw.githubusercontent.com/uanank209/File-Free-PBot/refs/heads/main/index.js";
   console.log(chalk.cyanBright(`[AUTO-UPDATE] Kiểm tra phiên bản trên GitHub...`));
   try {
     const { data: remoteSource } = await axios.get(GITHUB_RAW_URL, { timeout: 7000 });
