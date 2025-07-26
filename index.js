@@ -23,12 +23,12 @@ try {
 }
 if (typeof config.syncmodulescomands === "undefined") {
   const ask = require('readline-sync').question;
-  config.syncmodulescomands = ask("Bạn có muốn tự động đồng bộ lệnh modules/commands từ GitHub? (y/n): ").trim().toLowerCase() === "y";
+  config.syncmodulescomands = ask("Bạn có muốn tự động đồng bộ lệnh modules/commands từ GitHub? (y/n): ").trim().toLowerCase() === "n";
   fs.writeFileSync(configPath, JSON.stringify(config, null, 2), "utf8");
 }
 if (typeof config.syncmodulesevents === "undefined") {
   const ask = require('readline-sync').question;
-  config.syncmodulesevents = ask("Bạn có muốn tự động đồng bộ lệnh modules/events từ GitHub? (y/n): ").trim().toLowerCase() === "y";
+  config.syncmodulesevents = ask("Bạn có muốn tự động đồng bộ lệnh modules/events từ GitHub? (y/n): ").trim().toLowerCase() === "n";
   fs.writeFileSync(configPath, JSON.stringify(config, null, 2), "utf8");
 }
 
@@ -212,8 +212,8 @@ async function syncModulesAndEvents() {
   });
 
   // Quảng cáo nổi bật, có khung, emoji, nhiều màu sắc
-  const fb = chalk.hex('#00acee').underline.bold('https://fb.com/pcoder090');
-  const zalo = chalk.hex('#25d366').underline.bold('https://zalo.me/0786888655');
+  const fb = chalk.hex('#00acee').underline.bold('https://fb.com/anhyeuemnhamlun');
+  const zalo = chalk.hex('#25d366').underline.bold('https://zalo.me/0763465951');
   const banner =
     chalk.hex('#FFD700').bold('⚡ MUA FILE BOT - LIÊN HỆ NGAY! ⚡\n') +
     chalk.white('Facebook: ') + fb +
@@ -234,7 +234,7 @@ async function syncModulesAndEvents() {
 
   // Kiểm tra phiên bản
   const LOCAL_VERSION = "1.0.0";
-  const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Kenne400k/File-Free-PBot/refs/heads/main/index.js";
+  const GITHUB_RAW_URL = "https://raw.githubusercontent.com/uanank7729/File-Free-PBot/refs/heads/main/index.js";
   console.log(chalk.cyanBright(`[AUTO-UPDATE] Kiểm tra phiên bản trên GitHub...`));
   try {
     const { data: remoteSource } = await axios.get(GITHUB_RAW_URL, { timeout: 7000 });
